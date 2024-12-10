@@ -1,0 +1,11 @@
+name: istc
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pandas
+  - tqdm
+  - pip
+  - pip:
+      - pyyaml
+prefix: C:\Users\HLloyd\AppData\Local\mambaforge\envs\istc
