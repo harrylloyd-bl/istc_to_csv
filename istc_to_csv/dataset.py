@@ -1,7 +1,8 @@
 import logging
+import os.path
 from pathlib import Path
 import re
-from typing import Tuple, Dict
+from typing import Any
 
 import pandas as pd
 from tqdm import tqdm
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 logger.info(f"PROJ_ROOT path is: {PROJ_ROOT}")
 
 
-def row_from_doc(doc: Dict) -> Tuple[Dict]:
+def row_from_doc(doc: dict) -> tuple[dict[Any, Any]]:
     """
     Parse a YAML doc into flat csv rows
     The YAML doc is a (potentially nested) dictionary of strings describing a particular ISTC entry
@@ -90,6 +91,9 @@ def main(
     input_path: Path = RAW_DATA_DIR / "istc.yaml",
     output_path: Path = PROCESSED_DATA_DIR,
 ):
+    if not os.path.exists(PROCESSED_DATA_DIR):
+        os.mkdir(PROCESSED_DATA_DIR)
+
     logging.basicConfig(filename="yaml_to_csv.log", level=logging.INFO)
     logger.info("Processing dataset...")
     print("Loading and cleaning YAML")
