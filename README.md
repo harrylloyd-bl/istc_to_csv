@@ -79,6 +79,7 @@ The derived outputs are:
 ```
 --------
 Code was developed by Harry Lloyd, Research Software Engineer, British Library. Contact harry.lloyd [at] bl.uk.
+Version 1.0.0 of the code has a DOI [![DOI](https://zenodo.org/badge/901373558.svg)](https://doi.org/10.5281/zenodo.14644509)  
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
