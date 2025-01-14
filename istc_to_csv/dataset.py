@@ -163,7 +163,7 @@ def main(
     print("Exporting processed dataframes")
     for k, v in complete_dfs.items():
         print(f"{k}")
-        v.to_csv(output_path / f"{k}.csv", encoding="utf8", index=True)
+        v.to_csv(output_path / f"{k}.csv", encoding="utf-8-sig", index=True)
 
     print("Processing dataset complete")
     logger.info("Processing dataset complete.")
